@@ -1,0 +1,26 @@
+name: LaTeX test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up TeX Live
+        uses: zauguin/ctan-action@v1
+        with:
+          packages: >
+            biblatex
+            biblatex-apa
+            csquotes
+            biber
+
+      - name: Run test
+        working-directory: test
+        run: latexmk -pdf -interaction=nonstopmode -halt-on-error -use-biber test.tex
