@@ -1,13 +1,16 @@
 VILNIUS TECH – APA 7th edition for LaTeX
 
-Copyright (C) 2026 Vilnius Gediminas Technical University (VILNIUS TECH)
-
 This work may be distributed and/or modified under the conditions of the
 LaTeX Project Public License, version 1.3c.
 
-The latest version of this license is in:
+The latest version of this license is available at:
+
 https://www.latex-project.org/lppl/lppl-1-3c/
 
-This package is a wrapper around the separate biblatex-apa package. The
-biblatex-apa package is not included in this distribution and remains under
-its own license.
+This repository contains a LaTeX wrapper package developed by VILNIUS TECH.
+The wrapper does not contain the source code of the separate `biblatex-apa`
+package.
+
+`biblatex-apa` is an external dependency distributed under its own license.
+Its source code is not included in this repository and is not relicensed
+by this project.
