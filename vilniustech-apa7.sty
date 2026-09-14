@@ -1,0 +1,15 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{vilniustech-apa7}[2026/09/14 v0.1.0 VILNIUS TECH APA 7th edition wrapper]
+
+% Pass any user-supplied options through to biblatex, while the wrapper
+% itself fixes the citation/reference style to APA and the backend to Biber.
+\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{biblatex}}
+\ProcessOptions\relax
+
+% biblatex-apa requires csquotes and Biber.  The actual APA formatting is
+% provided by the installed biblatex-apa package; this wrapper does not copy
+% or modify that implementation.
+\RequirePackage{csquotes}
+\RequirePackage[backend=biber,style=apa]{biblatex}
+
+\endinput
