@@ -26,6 +26,8 @@ jobs:
             babel
             babel-english
 
-      - name: Run test
-        working-directory: test
-        run: latexmk -pdf -interaction=nonstopmode -halt-on-error test.tex
+- name: Run test
+  working-directory: test
+  env:
+    TEXINPUTS: ../:
+  run: latexmk -pdf -interaction=nonstopmode -halt-on-error test.tex
