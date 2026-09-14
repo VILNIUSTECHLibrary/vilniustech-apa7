@@ -28,5 +28,4 @@ jobs:
 
       - name: Run test
         working-directory: test
-        run: latexmk -pdf -interaction=nonstopmode -halt-on-error -use-biber test.tex
-        
+run: latexmk -pdf -interaction=nonstopmode -halt-on-error test.tex        
